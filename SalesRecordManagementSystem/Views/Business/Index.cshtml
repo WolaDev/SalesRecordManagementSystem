@@ -1,0 +1,26 @@
+﻿@model List<SalesRecordManagementSystem.Models.Business>
+
+<h1>Welcome @User!.Identity!.Name!</h1>
+<hr />
+<h2>Businesses</h2>
+
+<div>
+    <a href="@Url.ActionLink("CreateBusiness","Business")">Create Business</a>
+</div>
+<table id="businessesTable">
+    <tr>
+        <th>Business Name</th>
+        <th>Business Email</th>
+        <th>Business Type</th>
+        <th>Business Description</th>
+    </tr>
+    @foreach (var bus in @Model)
+    {
+        <tr>
+            <td>@bus.Name</td>
+            <td>@bus.Email</td>
+            <td>@bus.Type</td>
+            <td>@bus.Description</td>
+        </tr>
+    }
+</table>

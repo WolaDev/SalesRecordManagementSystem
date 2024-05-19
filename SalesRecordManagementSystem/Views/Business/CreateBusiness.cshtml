@@ -1,0 +1,34 @@
+﻿@model SalesRecordManagementSystem.Dto.CreateBusinessDto
+
+@{
+    ViewData["Title"] = "Create Business";
+}
+
+<h2>@ViewData["Title"]</h2>
+<hr>
+
+<form asp-action="CreateBusiness">
+
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Business Name:</label>
+        <input type="text" class="form-control" asp-for="Name">
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label">Business Email:</label>
+        <input type="email" class="form-control" asp-for="Email">
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Type" class="form-label">Business Type</label>
+        <input type="text" class="form-control" asp-for="Type">
+        <span asp-validation-for="Type" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Description" class="form-label"></label>
+        <textarea class="form-control" asp-for="Description"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Register</button>
+</form>
