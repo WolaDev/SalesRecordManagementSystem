@@ -47,7 +47,7 @@ namespace SalesRecordManagementSystem.Controllers
                     var userDetails = await Helper.GetCurrentUserIdAsync(_httpContextAccessor, _userManager);
                     var businesses = await _srsContext.Businesses.AnyAsync(x => x.Id == userDetails.userId);
 
-                    var redirectResult = businesses ? RedirectToAction("Index", "Business") : RedirectToAction("CreateBusiness", "Business");
+                    var redirectResult = businesses ? RedirectToAction("CreateBusiness", "Business") : RedirectToAction("Index", "Business");
 
                     _notyfService.Success("Login succesful");
                     return redirectResult;

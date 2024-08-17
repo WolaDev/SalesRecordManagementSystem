@@ -15,7 +15,8 @@ namespace SalesRecordManagementSystem.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            // return View();
+            return RedirectToAction("Index", "Business");
         }
 
         public IActionResult Privacy()
